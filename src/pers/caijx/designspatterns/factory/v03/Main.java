@@ -6,11 +6,17 @@ package pers.caijx.designspatterns.factory.v03;
 public class Main {
 
     public static void main(String[] args){
-        LeiFeng studentA = SimpleFactory.createFactory(GoodManEnum.STUDENT);
-        studentA.buyRice();
-        LeiFeng studentB = SimpleFactory.createFactory(GoodManEnum.STUDENT);
-        studentB.sweep();
-        LeiFeng studentC = SimpleFactory.createFactory(GoodManEnum.STUDENT);
-        studentC.wash();
+//        LeiFeng studentA = SimpleFactory.createFactory(GoodManEnum.STUDENT);
+//        studentA.buyRice();
+//        LeiFeng studentB = SimpleFactory.createFactory(GoodManEnum.STUDENT);
+//        studentB.sweep();
+//        LeiFeng studentC = SimpleFactory.createFactory(GoodManEnum.STUDENT);
+//        studentC.wash();
+
+        IFactory factory = new UndergraduateFactory();
+        LeiFeng student = factory.createLeiFeng();
+        student.wash();
+        student.sweep();
+        student.buyRice();
     }
 }
