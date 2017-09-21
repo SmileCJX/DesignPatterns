@@ -5,7 +5,7 @@ package pers.caijx.designspatterns.factory.v03;
  */
 public class LeiFeng {
 
-    public void swap(){
+    public void sweep(){
         System.out.println("扫地");
     }
 
